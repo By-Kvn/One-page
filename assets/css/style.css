@@ -1,0 +1,345 @@
+/* 23 JUIN 2022 */
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Fira Sans Condensed', sans-serif;
+}
+/* "vh" est une unité qui permet de comprendre tout l'écran visible par l'utilisateur, exemple ici  la section est comprise a 100vh c'est a dire que toute la  "Première" partie visible de l'écran , au scroll elle ne le sera plus.*/
+/*  Il faut "../" lorsque l'on souhaite aller en arriere dans notre chemin , exemple ici , nous somme dans le style et nous voulont aller dans img*/
+#section-1{
+    background-image:url(../img/bg.png) ;
+    background-size: cover;
+    background-position: bottom;
+    height:100vh;
+}
+/*
+#section-2{
+    background: rgba(49, 100, 159, 0.385);
+    height:200vh;
+}
+*/
+
+#section-1 header{
+    /* "diplay flex " afin d'aligner le tout*/
+    display: flex;
+    /* "align-items: center" afin d'aligner verticalement*/
+    align-items: center;
+    /* "justify-content: space betwwen " afin de comme son l'indique mettre un espace entre mes elements*/
+    justify-content: space-between;
+    max-width: 1600px;
+    /**/
+    margin: 0 auto;
+    /*marge interieur de 20px en haut , 10 sur la droite puis 0 en bas et enfin 10 px sur la gauche , sens des aiguilles d'une montre*/
+    padding: 20px 10px 0 10px;
+}
+
+#section-1 header nav a{
+    /* couleur du texte des nav*/
+color: #1c0d43;
+/* gras du texte des nav*/
+font-weight: 700;
+/*marge a gauche de  50px pour chaque nav (a)*/
+margin-left: 50px;
+/*taille de police*/
+font-size: 1.1em;
+}
+
+/*Ici on veut selectionner l'enfant numero 4 faisant parties des nav, on tulise donc nth:child suivi du chiifre en loccurence ici 4*/
+#section-1 header nav a:nth-child(4){
+    /* couleur du texte de la nav*/
+color:#bba3f6;
+border: 2px solid;
+/* 10px en haut et en bas et 25px a gauche et a droite*/
+padding: 10px 20px;
+border-radius:5px;
+/*marge a gauche afin de l'eloigner des autres elements nav*/
+margin-left: 65px;
+}
+/* AU maximum, a 767 px on vas devenir ces proprietes*/
+@media screen and(max-width:767px) {
+    #section-1 header .left img{
+        display: none;
+    }
+    #section-1 header nav a{
+margin-left: 0 25px;
+    }
+    #section-1 header nav a:nth-child(4){
+        /*marge a gauche afin de l'eloigner des autres elements nav*/
+        margin-left: 0 25px;
+        }
+    #section-1 header{
+        justify-content: center;
+        height: 50px;
+}
+#section-1 header nav a:nth-child(4){
+/*marge a gauche afin de l'eloigner des autres elements nav*/
+margin-left: 0 25px;
+}
+
+}
+
+#section-1 .container{
+    /* "diplay flex " afin d'aligner le tout*/
+    display: flex;
+    /* "align-items: center" afin d'aligner verticalement*/
+    align-items: center;
+    max-width: 1400px;
+    /* "justify-content: space betwwen " afin de comme son l'indique mettre un espace entre mes elements*/
+    justify-content: space-between;
+    margin: 0 auto;
+    height: 90%;
+    padding: 0 50px;
+}
+
+#section-1 .container h1{
+font-size: 5em; 
+color: #1c0d43;
+/* hauteur d'interligne*/
+line-height:1em;
+margin-bottom: 25px;
+}
+#section-1 .container p{
+    font-size: 1.5em;
+    color: #9e9aad;
+    margin-bottom: 55px;
+    line-height: 1.5em;
+    }
+#section-1 .container .left{
+        max-width: 500px;
+        }   
+#section-1 .container a{
+color: white;
+background: #8043fa;
+/* Hauteur et largeur*/
+padding: 15px 60px;
+border-radius: 5px;
+}  
+
+#section-1 .container img{
+margin: 130px;
+}
+@media screen and (max-width:1150px)  {
+    #section-1 .container img {
+        margin-right: 0px;
+    }
+} 
+
+@media screen and (max-width:991px)  {
+    #section-1 .container img {
+        height: 500px;
+    }
+} 
+
+@media screen and (max-width:791px)  {
+    #section-1 {
+        height: 100%;
+        background-position: right;
+    }
+    #section-1 .container {
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 100px;
+    }
+    #section-1 .container img  {
+        width:100%;
+        height: auto;
+    }
+
+    #section-1 .container .left  {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    #section-1 .container .right  {
+        width: 100%;
+    }
+}
+@media screen and (max-width:530px){
+    #section-1 .container h1{
+        font-size: 3em;
+    }
+    #section-1 .container {
+        padding:0 15px;
+    } 
+}
+
+
+#section-2{
+    max-width:1000px;
+    margin: 100px auto;
+    text-align: center;
+    padding: 0 25px;
+}
+
+#section-2 h2{
+    font-size: 3.5em;
+color: #1c0d43;
+}
+#section-2 .container-icon{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 70px;
+}
+
+#section-2 .container-icon .bloc-icon{
+    max-width: 200px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#section-2 .container-icon .bloc-img{
+    background-color:#f6f3fe;
+    height:150px;
+    width:150px;
+    border-radius:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#section-2 .container-icon .bloc-icon img{
+    width: 70%;
+}
+
+#section-2 .container-icon span{
+    font-weight: 700;
+    color: #1c0d43;
+    font-size: 1.5em;
+    margin: 25px 0 20px 0 ;
+}
+
+#section-2 .container-icon  p{
+    font-size: 1.1em;
+    line-height: 1.5em;
+    color: #9e9aad;
+}
+
+@media screen and (max-width:769px ){
+    #section-2 h2{
+        font-size: 2.5em;
+    }
+}
+
+@media screen and (max-width:600px ){
+    #section-2 .container-icon{
+        flex-direction: column;
+        align-items: center ;
+    }
+    #section-2 .container-icon .bloc-icon{
+        max-width: none;
+        width: 80%;
+        margin-bottom: 50px;
+    }
+    #section-2 .container-icon .bloc-img{
+        height: 250px;
+        width: 250px;
+    }
+    #section-2 .container-icon span{
+        font-size: 2.5em;
+    }
+    #section-2 .container-icon p{
+        font-size: 1.75em;
+    }
+}
+@media screen and (max-width:425px ){
+    #section h2{
+        font-size: 1.75em;
+    }
+    #section .container-icon .bloc-img{
+        height: 150px;
+        width: 150px;
+    }
+    #section-2 .container-icon span{
+        font-size: 1.75em;
+    }
+    #section-2 .container-icon p{
+        font-size: 1.25em;
+    }
+    #section-2 .container-icon .bloc-icon{
+        width: 100%;
+    }
+}
+
+footer{
+    background-color:#7f43fa;
+    padding: 80px 20px;
+}
+
+footer .container{
+    max-width: 1450px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .bloc{
+    max-width: 500px;
+    color: white;
+    line-height: 2em;
+}
+
+footer .bloc:nth-child(2){
+    display: flex;
+    width:400px;
+    justify-content: space-around;
+}
+
+footer .bloc img {
+    max-width: 150px;
+}
+
+footer .bloc-menu span{
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+footer .bloc-menu ul{
+margin-top: 20px;
+}
+
+footer .bloc-menu ul li a{
+    color: white;
+}
+
+@media screen and(max-width: 830px){
+    footer .bloc {
+        max-width: 300px;
+    }
+}
+
+@media screen and(max-width: 630px){
+    footer{
+        padding:30px 20px;
+    }
+
+    footer .container{
+        flex-direction: column;
+    }
+
+    footer .bloc{
+        max-width: none;
+        width: 95%;
+        margin-bottom: 50px;
+    }
+
+    footer .bloc:nth-child(2){
+        width: 80%;
+        max-width:none;
+    }
+}
+@media screen and(max-width: 400px) {
+    footer .bloc:nth-child(2){
+        width: 100%;
+    }
+
+    footer .bloc-menu span{
+        font-size: 1.2em;
+        font-weight: 500;
+    }
+}
